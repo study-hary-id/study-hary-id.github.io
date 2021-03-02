@@ -404,14 +404,14 @@ li {
 /*End rules for about section*/
 
 /*Start rules for services section*/
-.services-img {
+/* .services-img {
     position: absolute;
     left:-10%;
     top: 70rem;
     height: 10%;
     width: 15%;
     animation:move2 4s infinite;
-}
+} */
 
 .skills {
     border-top: 4px solid #ff5a3d;   
@@ -436,7 +436,6 @@ li {
     letter-spacing: 2px;
     font-size: large;
     margin: 2rem -2px 2rem 0;
-
 }
 
 .skill h1 {
@@ -503,7 +502,7 @@ color:#c26700;
     text-align: center;
     vertical-align: middle;
     background-color: #ffffff;
-    margin-top: 10%;
+    margin-top: 20%;
     padding: 1rem 0;
     position: relative;
 }
