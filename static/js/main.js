@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    $('.toggler').on('click', function(){
+    $('.toggler').on('click', function() {
         $(this).toggleClass('open');
         $('.top-nav').toggleClass('open');
     });
 
-    $('.top-nav .nav-link').on('click', function(){
+    $('.top-nav .nav-link').on('click', function() {
         $('.toggler').toggleClass('open');
         $('.top-nav').toggleClass('open');
     });
