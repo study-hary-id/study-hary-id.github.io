@@ -1,188 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Showcase</title>
-    <link type="text/css" rel="stylesheet" href="static/css/main.css">
+    <link type="text/css" rel="stylesheet" href="static/css/main.css" />
+    <link type="image/x-icon" rel="icon" href="assets/favicon/favicon.ico" />
 
     <!-- aos library is used to provide and implement animation -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- fontawesome is used to provide custom fonts and some social media icon -->
-    <link rel="stylesheet" crossorigin="anonymous"
-        href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr">
-</head>
+    <link
+      rel="stylesheet"
+      crossorigin="anonymous"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- Header section is used to first landing for visitor -->
     <header>
-        <div class="left-circle"><img alt="Left Circle" src="images/leftcircle.svg"></div>
-        <div class="circle-img"><img alt="Circle Group" src="images/circleimg.svg"></div>
-        <div class="toggler">
-            <div class="bar half start"></div>
-            <div class="bar"></div>
-            <div class="bar half end"></div>
-        </div>
+      <div class="left-circle">
+        <img
+          alt="Left Circle Group"
+          src="assets/images/left-circle-group.svg"
+        />
+      </div>
+      <div class="right-circle">
+        <img
+          alt="Right Circle Group"
+          src="assets/images/right-circle-group.svg"
+        />
+      </div>
+      <div class="toggler">
+        <div class="bar half start"></div>
+        <div class="bar"></div>
+        <div class="bar half end"></div>
+      </div>
 
-        <nav class="top-nav">
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Achievements</a></li>
-                <!-- <li><a href="#portfolio" class="nav-link">Portfolio</a></li> -->
-            </ul>
-        </nav>
+      <nav class="top-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        </ul>
+      </nav>
 
-        <div class="landing-text">
-            <h1>Muhammad Haryansyah</h1>
-            <h6>Aspiring Backend and Machine Learning Engineer</h6>
-            <div class="scrolldown">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="landing-text">
+        <h1>Muhammad Haryansyah</h1>
+        <h6>Aspiring Backend and Machine Learning Engineer</h6>
+        <div class="scrolldown">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+      </div>
     </header>
 
     <!-- About section is used to explain about ourselves -->
     <section class="about" id="about">
-        <div class="container">
-            <div class="skills-img">
-                <img alt="Blue Circle" src="images/bluecircle.svg" data>
-            </div>
-
-            <div class="about-details" data-aos="fade-up" data-aos-delay="300ms">
-                <div class="about-heading">
-                    <h1>About</h1>
-                    <h6>Myself</h6>
-                </div>
-
-                <br><h3>Hello! This is Hary here</h3><br>
-
-                <p>
-                    I'm a self thaugh learner who likes technology around web development
-                    and Artificial Intelligence or Machine Learning. Also has more interest
-                    in FOSS and Python programming language. But for now I'm focusing on Backend Development.
-                    <br><br><a href="https://linkedin.com/in/study-hary-id" class="cta">Checkout my Resume</a>
-                </p>
-                <br>
-                <address>Contact me here <a href="mailto:haryansyah.person.id@gmail.com">
-                    haryansyah.person.id@gmail.com</a>
-                </address>
-
-                <div class="social-media">
-                    <ul class="nav-list">
-                        <li>
-                            <a href="https://linkedin.com/in/study-hary-id" class="icon-link">
-                                <i class="fab fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/study-hary-id" class="icon-link">
-                                <i class="fab fa-github-square"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/study.hary.id" class="icon-link">
-                                <i class="fab fa-facebook-square"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="circle-img">
+          <img
+            alt="Blue Circle Group"
+            src="assets/images/blue-circle-group.svg"
+          />
         </div>
+
+        <div class="about-details" data-aos="fade-up" data-aos-delay="300ms">
+          <div class="about-heading">
+            <h1>About</h1>
+            <h6>Myself</h6>
+          </div>
+
+          <br />
+          <h3>Hello! This is Hary here</h3>
+          <br />
+
+          <p>
+            I'm a self taught learner who likes technology around web
+            development and Artificial Intelligence or Machine Learning. Also
+            has more interest in FOSS and Python programming language. But for
+            now I'm focusing on Backend Development.<br /><br />
+            <a href="https://linkedin.com/in/study-hary-id" class="cta">
+              Checkout my Resume
+            </a>
+          </p>
+          <br />
+          <address>
+            Contact me here
+            <a href="mailto:haryansyah.person.id@gmail.com">
+              haryansyah.person.id@gmail.com
+            </a>
+          </address>
+
+          <div class="social-media">
+            <ul class="nav-list">
+              <li>
+                <a
+                  href="https://linkedin.com/in/study-hary-id"
+                  class="icon-link"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/study-hary-id" class="icon-link">
+                  <i class="fab fa-github-square"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/study.hary.id"
+                  class="icon-link"
+                >
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Achievements section is used to show your progress or your timeline progress -->
-    <section class="services" id="services">
-        <div class="container">
-            <!-- <div class="services-img">
-                <img alt="Left Rectangle" src="images/leftrectangle.svg">
-            </div> -->
-            <div class="heading-section">
-                <h1>Achievements</h1>
-                <h6>Some honourable mentions</h6>
-            </div>
-
-            <div class="skills" data-aos="fade-right" data-aos-delay="100ms">
-                <div class="skill" data-date="25 December 2020"
-                    data-aos="fade-right" data-aos-delay="300ms">
-                    <h3>Python Certificate</h3>
-                    <p>Complete learning fundamentals and Object Oriented Paradigm Python
-                        for software development.</p><br>
-                    <a href="https://progate.com/course_certificate/1132b4aaqlvjm3"
-                        class="cta">View certificate</a>
-                </div>
-
-                <div class="skill" data-date="27 December 2020"
-                    data-aos="fade-right" data-aos-delay="300ms">
-                    <h3>Command Line Certificate</h3>
-                    <p>Complete learning fundamentals and common unix command line.</p><br>
-                    <a href="https://progate.com/course_certificate/e81583f1qm01p5"
-                        class="cta">View certificate</a>
-                </div>
-
-                <div class="skill" data-date="23 January 2021"
-                    data-aos="fade-right" data-aos-delay="300ms">
-                    <h3>SQL Database</h3>
-                    <p>Complete learning SQL fundamentals, performs queries and
-                        basics for manipulating databases</p><br>
-                    <a href="https://progate.com/course_certificate/e5c12e7aqoyial"
-                        class="cta">View cetificate</a>
-                </div>
-            </div>
+    <section class="achievements" id="achievements">
+      <div class="container">
+        <div class="square-img">
+          <img
+            alt="Left Rectangle Group"
+            src="assets/images/left-rectangle-group.svg"
+          />
         </div>
+        <div class="heading-section">
+          <h1>Achievements</h1>
+          <h6>Some honourable mentions</h6>
+        </div>
+
+        <div class="skills" data-aos="fade-right" data-aos-delay="100ms">
+          <div
+            class="skill"
+            data-date="25 December 2020"
+            data-aos="fade-right"
+            data-aos-delay="300ms"
+          >
+            <h3>Python Certificate</h3>
+            <p>
+              Complete learning fundamentals and Object Oriented Paradigm in
+              Python for software development.
+            </p>
+            <br />
+            <a
+              href="https://progate.com/course_certificate/1132b4aaqlvjm3"
+              class="cta"
+              >View certificate</a
+            >
+          </div>
+
+          <div
+            class="skill"
+            data-date="27 December 2020"
+            data-aos="fade-right"
+            data-aos-delay="300ms"
+          >
+            <h3>Command Line Certificate</h3>
+            <p>
+              Complete learning fundamentals command line and common unix
+              command line.
+            </p>
+            <br />
+            <a
+              href="https://progate.com/course_certificate/e81583f1qm01p5"
+              class="cta"
+              >View certificate</a
+            >
+          </div>
+
+          <div
+            class="skill"
+            data-date="23 January 2021"
+            data-aos="fade-right"
+            data-aos-delay="300ms"
+          >
+            <h3>SQL Database Certificate</h3>
+            <p>
+              Complete learning SQL fundamentals, performs queries and basics
+              for manipulating databases.
+            </p>
+            <br />
+            <a
+              href="https://progate.com/course_certificate/e5c12e7aqoyial"
+              class="cta"
+              >View cetificate</a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="heading-section">
-                <h1>Portfolio</h1>
-                <h6>Some of my recent works</h6>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-in" data-aos-delay="300ms">
-                <div class="portfolio-img margin-right">
-                    <img alt="" src="">
-                </div>
-                <div class="portfolio-description">
-                    <h6>Category of portfolio</h6>
-                    <h1>The name of the portfolio</h1>
-                    <p>The description of the portfolio</p>
-                    <a href="" class="cta">View portfolio</a>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-aos="fade-in" data-aos-delay="300ms">
-                <div class="portfolio-img margin-left">
-                    <img alt="" src="">
-                </div>
-                <div class="portfolio-description margin-right">
-                    <h6>Category of portfolio</h6>
-                    <h1>The name of the portfolio</h1>
-                    <p>The description of the portfolio</p>
-                    <a href="" class="cta">View portfolio</a>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="contact-img">
-                    <img alt="" src="images/Group 1956.svg">
-                </div>
-            </div>
+    <!-- Portfolio section is used to showcase your projects that has been created -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="heading-section">
+          <h1>My Portfolio</h1>
+          <h6>Some of my recent works</h6>
         </div>
-    </section> -->
+
+        <!-- <div class="portfolio-item" data-aos="fade-in" data-aos-delay="300ms">
+          <div class="portfolio-img margin-right">
+            <img alt="" src="" />
+          </div>
+          <div class="portfolio-description">
+            <h6>Category of portfolio</h6>
+            <h1>The name of the portfolio</h1>
+            <p>The description of the portfolio</p>
+            <a href="" class="cta">View portfolio</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-aos="fade-in" data-aos-delay="300ms">
+          <div class="portfolio-img margin-left">
+            <img alt="" src="" />
+          </div>
+          <div class="portfolio-description margin-right">
+            <h6>Category of portfolio</h6>
+            <h1>The name of the portfolio</h1>
+            <p>The description of the portfolio</p>
+            <a href="" class="cta">View portfolio</a>
+          </div>
+        </div> -->
+      </div>
+    </section>
 
     <footer class="copyright">
-        <div class="up" id="up">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-        <p>&copy; 2021 Muhammad Haryansyah</p>
+      <div class="up" id="up">
+        <i class="fas fa-chevron-up"></i>
+      </div>
+      <p>&copy; 2021 Muhammad Haryansyah</p>
     </footer>
 
     <!-- The JavaScript files that used to implement the animations -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="static/js/main.js"></script>
-</body>
+  </body>
 </html>
