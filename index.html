@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Showcase</title>
-    <link type="text/css" rel="stylesheet" href="static/css/main.css" />
+    <link type="text/css" rel="stylesheet" href="static/css/style.css" />
     <link type="image/x-icon" rel="icon" href="assets/favicon/favicon.ico" />
 
     <!-- aos library is used to provide and implement animation -->
@@ -35,7 +35,7 @@
           src="assets/images/right-circle-group.svg"
         />
       </div>
-      <div class="toggler">
+      <div class="menu-toggler">
         <div class="bar half start"></div>
         <div class="bar"></div>
         <div class="bar half end"></div>
@@ -46,13 +46,12 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#achievements" class="nav-link">Achievements</a></li>
-          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <!-- <li><a href="#portfolio" class="nav-link">Portfolio</a></li> -->
         </ul>
       </nav>
 
       <div class="landing-text">
         <h1>Muhammad Haryansyah</h1>
-        <h6>Aspiring Backend and Machine Learning Engineer</h6>
         <div class="scrolldown">
           <span></span>
           <span></span>
@@ -82,11 +81,21 @@
           <br />
 
           <p>
-            I'm a self taught learner who likes technology around web
-            development and Artificial Intelligence or Machine Learning. Also
-            has more interest in FOSS and Python programming language. But for
-            now I'm focusing on Backend Development.<br /><br />
-            <a href="https://linkedin.com/in/study-hary-id" class="cta">
+            I'm a self taught learner who likes technology around
+            <em>web development</em> especially in
+            <strong>Backend Development</strong> and
+            <strong>Artificial Intelligence</strong> or
+            <strong>Machine Learning</strong>. Also has more interest in
+            <strong>FOSS</strong>, <strong>Go</strong> lang and
+            <strong>Python</strong> programming language. I also have experience
+            for <strong>Frontend Development</strong> for mobile and desktop
+            application. <br /><br />
+            <a
+              href="https://linkedin.com/in/study-hary-id"
+              class="cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Checkout my Resume
             </a>
           </p>
@@ -104,12 +113,19 @@
                 <a
                   href="https://linkedin.com/in/study-hary-id"
                   class="icon-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i class="fab fa-linkedin"></i>
                 </a>
               </li>
               <li>
-                <a href="https://github.com/study-hary-id" class="icon-link">
+                <a
+                  href="https://github.com/study-hary-id"
+                  class="icon-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i class="fab fa-github-square"></i>
                 </a>
               </li>
@@ -117,6 +133,8 @@
                 <a
                   href="https://www.facebook.com/study.hary.id"
                   class="icon-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i class="fab fa-facebook-square"></i>
                 </a>
@@ -130,12 +148,12 @@
     <!-- Achievements section is used to show your progress or your timeline progress -->
     <section class="achievements" id="achievements">
       <div class="container">
-        <div class="square-img">
+        <!-- <div class="square-img">
           <img
             alt="Left Rectangle Group"
             src="assets/images/left-rectangle-group.svg"
           />
-        </div>
+        </div> -->
         <div class="heading-section">
           <h1>Achievements</h1>
           <h6>Some honourable mentions</h6>
@@ -157,8 +175,11 @@
             <a
               href="https://progate.com/course_certificate/1132b4aaqlvjm3"
               class="cta"
-              >View certificate</a
+              target="_blank"
+              rel="noopener noreferrer"
             >
+              View certificate
+            </a>
           </div>
 
           <div
@@ -176,8 +197,11 @@
             <a
               href="https://progate.com/course_certificate/e81583f1qm01p5"
               class="cta"
-              >View certificate</a
+              target="_blank"
+              rel="noopener noreferrer"
             >
+              View certificate
+            </a>
           </div>
 
           <div
@@ -195,22 +219,25 @@
             <a
               href="https://progate.com/course_certificate/e5c12e7aqoyial"
               class="cta"
-              >View cetificate</a
+              target="_blank"
+              rel="noopener noreferrer"
             >
+              View cetificate
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Portfolio section is used to showcase your projects that has been created -->
-    <section class="portfolio" id="portfolio">
+    <!-- <section class="portfolio" id="portfolio">
       <div class="container">
         <div class="heading-section">
           <h1>My Portfolio</h1>
           <h6>Some of my recent works</h6>
         </div>
 
-        <!-- <div class="portfolio-item" data-aos="fade-in" data-aos-delay="300ms">
+    <div class="portfolio-item" data-aos="fade-in" data-aos-delay="300ms">
           <div class="portfolio-img margin-right">
             <img alt="" src="" />
           </div>
@@ -232,20 +259,20 @@
             <p>The description of the portfolio</p>
             <a href="" class="cta">View portfolio</a>
           </div>
-        </div> -->
-      </div>
-    </section>
+        </div>
+    </div>
+    </section> -->
 
     <footer class="copyright">
       <div class="up" id="up">
         <i class="fas fa-chevron-up"></i>
       </div>
-      <p>&copy; 2021 Muhammad Haryansyah</p>
+      <p>&copy; 2021 Muhammad Haryansyah. All rights reserved</p>
     </footer>
 
     <!-- The JavaScript files that used to implement the animations -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="static/js/main.js"></script>
+    <script src="static/js/script.js"></script>
   </body>
 </html>

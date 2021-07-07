@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  $(".toggler").on("click", function () {
+  $(".menu-toggler").on("click", function () {
     $(this).toggleClass("open");
     $(".top-nav").toggleClass("open");
   });
 
   $(".top-nav .nav-link").on("click", function () {
-    $(".toggler").toggleClass("open");
+    $(".menu-toggler").toggleClass("open");
     $(".top-nav").toggleClass("open");
   });
 
