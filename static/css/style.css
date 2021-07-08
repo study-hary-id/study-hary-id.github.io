@@ -65,9 +65,9 @@ mostly for heading-section class
   font-size: 2rem;
   font-weight: 300;
 }
-/*End reusable rules for html class*/
+/* End reusable rules for html class */
 
-/*Start rules for html header*/
+/* Start rules for html header */
 header {
   width: 100%;
   height: 100vh;
@@ -262,9 +262,9 @@ li {
     opacity: 0;
   }
 }
-/*End rules for html header*/
+/* End rules for html header */
 
-/*Start rules for about section*/
+/* Start rules for about section */
 .about .container {
   display: flex;
   align-items: center;
@@ -353,9 +353,9 @@ li {
   top: 100%;
   right: 0%;
 }
-/*End rules for about section*/
+/* End rules for about section */
 
-/*Start rules for achievements section*/
+/* Start rules for achievements section */
 .square-img {
   animation: move2 4s infinite;
   position: absolute;
@@ -444,9 +444,9 @@ li {
 .skills a:hover {
   color: #c26700;
 }
-/*End rules for achievements section*/
+/* End rules for achievements section */
 
-/*Start rules for footer section*/
+/* Start rules for footer section */
 .copyright {
   background-color: #ffffff;
   margin-top: 10rem;
@@ -483,9 +483,9 @@ li {
   font-size: 1.5rem;
   font-weight: 600;
 }
-/*End rules for footer section*/
+/* End rules for footer section */
 
-/*Start rules for implement the animations*/
+/* Start rules to implement animations */
 @keyframes move {
   0% {
     transform: scale(0.95);
@@ -550,4 +550,150 @@ li {
     box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
   }
 }
-/*End rules for implement the animations*/
+/* End rules to implement animations */
+
+/* Start media query for 768px width */
+@media screen and (max-width: 768px) {
+  body {
+    background: black no-repeat center fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  p {
+    font-size: small;
+  }
+
+  .heading-section h1 {
+    font-size: 3rem;
+  }
+
+  .right-circle {
+    height: 40%;
+    width: 25%;
+    top: 50rem;
+  }
+
+  li {
+    margin: 2rem 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    font-size: 4.5rem;
+  }
+
+  .landing-text h1 {
+    font-size: 10rem;
+  }
+
+  .circle-img {
+    top: 50rem;
+  }
+
+  .about-heading h1 {
+    font-size: 8rem;
+  }
+
+  .about-details h3 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 400;
+  }
+
+  .about-details li {
+    margin: 0 2rem;
+  }
+
+  .about-details .nav-list {
+    flex-direction: initial;
+  }
+
+  .square-img {
+    top: 100rem;
+  }
+
+  .skills {
+    border-top: 4px solid #ff5a3d;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    grid-gap: 1rem;
+    margin-left: 3rem;
+    margin-top: 10rem;
+    position: relative;
+    text-align: left;
+  }
+
+  .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+  }
+
+  .skill h3 {
+    color: #ffee00;
+    font-size: medium;
+    letter-spacing: 2px;
+    margin: 2rem -2px 2rem 0;
+    text-align: left;
+  }
+
+  .skills .skill {
+    border-right: none;
+    margin-right: 0rem;
+    padding-right: 0rem;
+    position: relative;
+  }
+
+  .skills .skill:last-of-type {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .skills .skill::before,
+  .skills .skill::after {
+    left: 0%;
+    display: grid;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  .skills a {
+    color: #ff961e;
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+
+  .skills a:hover {
+    color: #c26700;
+  }
+
+  .skills .skill::before {
+    color: white;
+    content: attr(data-date);
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    min-width: 12rem;
+    text-align: right;
+    text-align: center;
+    text-align-last: auto;
+    top: -5rem;
+  }
+
+  .skills .skill::after {
+    background-color: #ffe838;
+    border-radius: 100%;
+    box-shadow: 0 0 0 4px #ff5a3d;
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    top: -1rem;
+  }
+}
+/* End media query for 768px width */
