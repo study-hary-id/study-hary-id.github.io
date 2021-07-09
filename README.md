@@ -8,6 +8,7 @@ This is my first website project, this website is used to show my achievements a
 - Achievements section
 - Portfolio section _(In html comments)_
 - Animation using **CSS**, **JS**, **jQuery** & **AOS** library
+- Media query for tablet _(768px)_ and phone _(600px)_
 
 ## Installation
 
