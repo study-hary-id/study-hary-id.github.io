@@ -69,7 +69,7 @@ li {
 
 /* Layout rules */
 section {
-  padding: 6rem 0;
+  padding: 12rem 0 6rem 0;
 }
 
 .container {
@@ -118,7 +118,7 @@ p {
 }
 
 .section--heading h1::before {
-  width: 10rem;
+  width: 25%;
   height: 3px;
   border-radius: 0.8rem;
 }
@@ -341,10 +341,6 @@ header {
 }
 
 /* About section rules */
-section.about {
-  padding-top: 12rem;
-}
-
 .container {
   position: relative;
 }
@@ -431,8 +427,8 @@ section.about {
   color: #ffffff;
 }
 
-/*Start services*/
-.services-img {
+/* Achievements section rules */
+.square--left {
   position: absolute;
   left: -10%;
   top: 70rem;
@@ -441,7 +437,7 @@ section.about {
   animation: move2 4s infinite;
 }
 
-.my-skills {
+.skills {
   border-top: 4px solid #ff5a3d;
   position: relative;
   margin-top: 15rem;
@@ -450,6 +446,7 @@ section.about {
   grid-gap: 3rem;
   text-align: left;
 }
+
 .skill {
   display: flex;
   flex-direction: column;
@@ -457,41 +454,42 @@ section.about {
   align-items: left;
 }
 
+/* .skill h1 {
+  text-align: left;
+  letter-spacing: 2px;
+  margin: 2rem -2px 2rem 0;
+} */
+
 .skill h3 {
   text-align: left;
   color: #ffee00;
   letter-spacing: 2px;
-  font-size: large;
-  margin: 2rem -2px 2rem 0;
-}
-.skill h1 {
-  text-align: left;
-  letter-spacing: 2px;
+  font-size: 1.9rem;
   margin: 2rem -2px 2rem 0;
 }
 
-.my-skills .skill {
+.skills .skill {
   border-right: none;
   margin-right: 1rem;
   padding-right: 1rem;
   position: relative;
 }
 
-.my-skills .skill:last-of-type {
+.skills .skill:last-of-type {
   padding-bottom: 0;
   margin-bottom: 0;
   border: none;
 }
 
-.my-skills .skill::before,
-.my-skills .skill::after {
+.skills .skill::before,
+.skills .skill::after {
   position: absolute;
   display: grid;
   left: 0%;
   transform: translateX(-50%);
 }
 
-.my-skills .skill::before {
+.skills .skill::before {
   content: attr(data-date);
   top: -5rem;
   text-align-last: auto;
@@ -501,7 +499,7 @@ section.about {
   margin-left: 5rem;
 }
 
-.my-skills .skill::after {
+.skills .skill::after {
   top: -1rem;
   content: "";
   box-shadow: 0 0 0 4px #ff5a3d;
@@ -511,15 +509,20 @@ section.about {
   background-color: #ffe838;
 }
 
-.my-skills a {
+.skills p {
+  font-size: 1.8rem;
+  line-height: 0.7cm;
+}
+
+.skills a {
   color: #ff961e;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-decoration: underline;
 }
-.my-skills a:hover {
+
+.skills a:hover {
   color: #c26700;
 }
-/*End services*/
 
 /*Start portfolio*/
 .portfolio-item {
@@ -829,17 +832,18 @@ section.about {
     margin: 0 2rem;
   }
 
-  .services-img {
+  /* Achievements section rules */
+  .square--left {
     top: 100rem;
   }
-  .my-skills {
+  .skills {
     border-top: 4px solid #ff5a3d;
     position: relative;
     margin-top: 10rem;
     display: grid;
     margin-left: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-row-gap: 10rem;
     text-align: left;
   }
   .skill {
@@ -848,50 +852,40 @@ section.about {
     justify-content: left;
     align-items: left;
   }
-
+  /* .skill h1 {
+    text-align: left;
+    letter-spacing: 1px;
+    margin: 2rem -2px 2rem 0;
+  } */
   .skill h3 {
     text-align: left;
     color: #ffee00;
     letter-spacing: 2px;
-    font-size: medium;
+    font-size: 1.8rem;
     margin: 2rem -2px 2rem 0;
   }
-  .skill h1 {
-    text-align: left;
-    letter-spacing: 1px;
-    margin: 2rem -2px 2rem 0;
+  .skill p {
+    font-size: 1.7rem;
   }
-
-  .my-skills .skill {
+  .skills .skill {
     border-right: none;
     margin-right: 0rem;
     padding-right: 0rem;
     position: relative;
   }
-
-  .my-skills .skill:last-of-type {
+  .skills .skill:last-of-type {
     padding-bottom: 0;
     margin-bottom: 0;
     border: none;
   }
-
-  .my-skills .skill::before,
-  .my-skills .skill::after {
+  .skills .skill::before,
+  .skills .skill::after {
     position: absolute;
     display: grid;
     left: 0%;
     transform: translateX(-50%);
   }
-  .my-skills a {
-    color: #ff961e;
-    font-size: 1.5rem;
-    text-decoration: underline;
-  }
-  .my-skills a:hover {
-    color: #c26700;
-  }
-
-  .my-skills .skill::before {
+  .skills .skill::before {
     content: attr(data-date);
     top: -5rem;
     text-align-last: auto;
@@ -902,8 +896,7 @@ section.about {
     text-align: center;
     margin-left: 2rem;
   }
-
-  .my-skills .skill::after {
+  .skills .skill::after {
     top: -1rem;
     content: "";
     box-shadow: 0 0 0 4px #ff5a3d;
@@ -911,6 +904,14 @@ section.about {
     height: 1.5rem;
     width: 1.5rem;
     background-color: #ffe838;
+  }
+  .skills a {
+    color: #ff961e;
+    font-size: 1.6rem;
+    text-decoration: underline;
+  }
+  .skills a:hover {
+    color: #c26700;
   }
 
   .icon-container {
@@ -1007,13 +1008,17 @@ section.about {
     font-size: 2rem;
   }
 
-  .services-img {
+  /* Achievements section rules */
+  .square--left {
     width: 22%;
     height: 15%;
     top: 110rem;
   }
-
-  .my-skills {
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-row-gap: 8rem;
+  }
+  /* .skills {
     border-left: 4px solid #ff5a3d;
     border-top: none;
     position: relative;
@@ -1030,7 +1035,6 @@ section.about {
     justify-content: left;
     align-items: left;
   }
-
   .skill h3 {
     text-align: left;
     color: #ffee00;
@@ -1038,33 +1042,29 @@ section.about {
     font-size: 1.8rem;
     margin: -1.5rem 1px 1rem 2rem;
   }
-
-  .my-skills .skill {
+  .skills p {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+  }
+  .skills .skill {
     border-right: none;
     margin-right: 1rem;
     padding-right: 1rem;
     position: relative;
   }
-
-  .my-skills .skill:last-of-type {
+  .skills .skill:last-of-type {
     padding-bottom: 0;
     margin-bottom: 0;
     border: none;
   }
-
-  .my-skills p {
-    margin-left: 2rem;
-    font-size: 1.5rem;
-  }
-  .my-skills .skill::before,
-  .my-skills .skill::after {
+  .skills .skill::before,
+  .skills .skill::after {
     position: absolute;
     display: grid;
     left: 0%;
     transform: translateX(-50%);
   }
-
-  .my-skills .skill::before {
+  .skills .skill::before {
     content: attr(data-date);
     left: -9rem;
     width: 10rem;
@@ -1075,8 +1075,7 @@ section.about {
     color: white;
     text-align: center;
   }
-
-  .my-skills .skill::after {
+  .skills .skill::after {
     top: -1rem;
     content: "";
     box-shadow: 0 0 0 4px #ff5a3d;
@@ -1085,16 +1084,15 @@ section.about {
     width: 1.5rem;
     background-color: #ffe838;
   }
-
-  .my-skills a {
+  .skills a {
     color: #ff961e;
     font-size: 1.3rem;
     margin-left: 2rem;
     margin-bottom: 2rem;
   }
-  .my-skills a:hover {
+  .skills a:hover {
     color: #c26700;
-  }
+  } */
 
   .portfolio-item {
     flex-direction: column;
@@ -1176,6 +1174,85 @@ section.about {
   }
 }
 
+/* Normal phone view rules */
+@media screen and (max-width: 500px) {
+  .section--heading {
+    margin-bottom: 5rem;
+  }
+
+  section.achievements {
+    padding-top: 6rem;
+  }
+  .skills {
+    border-left: 4px solid #ff5a3d;
+    border-top: none;
+    position: relative;
+    align-items: center;
+    display: grid;
+    margin: 5rem 1.5rem 5rem 13rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    text-align: left;
+  }
+  .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+  }
+  .skill h3 {
+    margin: -1.5rem 1px 1rem 2rem;
+  }
+  .skills p {
+    margin-left: 2rem;
+  }
+  .skills .skill {
+    border-right: none;
+    margin-right: 1rem;
+    padding-right: 1rem;
+    position: relative;
+  }
+  .skills .skill:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+  .skills .skill::before,
+  .skills .skill::after {
+    position: absolute;
+    display: grid;
+    left: 0%;
+    transform: translateX(-50%);
+  }
+  .skills .skill::before {
+    content: attr(data-date);
+    left: -9rem;
+    width: 10rem;
+    top: -1rem;
+    text-align-last: auto;
+    min-width: 10rem;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+  }
+  .skills .skill::after {
+    top: -1rem;
+    content: "";
+    box-shadow: 0 0 0 4px #ff5a3d;
+    border-radius: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #ffe838;
+  }
+  .skills a {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  .skills a:hover {
+    color: #c26700;
+  }
+}
+
 /* Smaller phone view rules */
 @media screen and (max-width: 300px) {
   .landing-text h1 {
@@ -1190,6 +1267,13 @@ section.about {
   }
   .bar {
     height: 3px;
+  }
+
+  .section--heading h1 {
+    font-size: 2.2rem;
+  }
+  .section--heading h6 {
+    font-size: 1.7rem;
   }
 
   section.about {
@@ -1213,6 +1297,19 @@ section.about {
   }
   address {
     font-size: 1.7rem;
+  }
+
+  .skills {
+    margin: 0;
+  }
+  .skill h3 {
+    font-size: 1.7rem;
+  }
+  .skill p {
+    font-size: 1.6rem;
+  }
+  .skill a {
+    font-size: 1.5rem;
   }
 }
 
