@@ -41,7 +41,7 @@
 
 html {
   font-size: 10px;
-  font-family: "Gotham Medium";
+  /* font-family: "Gotham Medium"; */
   color: #c5c5c5;
 }
 
@@ -55,7 +55,8 @@ body {
 address {
   display: block;
   font-style: normal;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 img {
@@ -86,7 +87,7 @@ a {
 }
 
 p {
-  font-family: "Gotham Medium";
+  /* font-family: "Gotham Medium"; */
   line-height: 0.6cm;
   font-size: 1.8rem;
   font-weight: 200;
@@ -170,7 +171,7 @@ header {
 }
 
 .menu--toggler {
-  position: absolute;
+  position: fixed;
   top: 5rem;
   right: 5rem;
   width: 5rem;
@@ -339,11 +340,36 @@ header {
   }
 }
 
-/*Start about*/
+/* About section rules */
+section.about {
+  padding-top: 12rem;
+}
+
+.container {
+  position: relative;
+}
+
 .about .container {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.circle-group {
+  position: absolute;
+  width: 25%;
+  height: 15%;
+  top: 100%;
+  right: 0%;
+  animation: move2 4s infinite;
+}
+
+.about-details {
+  flex: 1;
+}
+
+.about-details a:hover {
+  color: #0059ff;
 }
 
 .about-heading {
@@ -352,6 +378,7 @@ header {
   line-height: 0;
   margin-bottom: 6rem;
 }
+
 .about-heading h1 {
   font-size: 10rem;
   opacity: 0.3;
@@ -362,27 +389,18 @@ header {
   font-size: 2rem;
   font-weight: 400;
 }
-.container {
-  position: relative;
-}
 
 .about-details h3 {
-  font-size: 3rem;
-  font-weight: 400;
   color: white;
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
 }
 
-.about-details a:hover {
-  color: #0059ff;
-}
-
-.profile-img {
-  flex: 0.8;
-  margin-right: 5rem;
-}
-
-.about-details {
-  flex: 1;
+.about-details p {
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 1cm;
 }
 
 .social-media {
@@ -394,36 +412,24 @@ header {
   transition: color 650ms;
 }
 
-.fa-medium:hover {
-  color: #ffffff;
-}
-
-.fa-github-square:hover {
-  color: #ffffff;
-}
-
 .fa-linkedin:hover {
   color: #ffffff;
 }
-
-.fa-twitter-square:hover {
+.fa-github-square:hover {
   color: #ffffff;
 }
-
+.fa-facebook-square:hover {
+  color: #ffffff;
+}
+.fa-medium:hover {
+  color: #ffffff;
+}
 .fa-behance-square:hover {
   color: #ffffff;
 }
-
-.skills-img {
-  position: absolute;
-  width: 25%;
-  height: 15%;
-  top: 100%;
-  right: 0%;
-  animation: move2 4s infinite;
+.fa-twitter-square:hover {
+  color: #ffffff;
 }
-
-/*End about*/
 
 /*Start services*/
 .services-img {
@@ -758,10 +764,10 @@ header {
 
 /* Start media queries */
 @media screen and (max-width: 991px) {
-  li {
+  .top-nav li {
     margin: 2rem 0;
   }
-  .nav__list {
+  .top-nav .nav__list {
     flex-direction: column;
   }
 }
@@ -804,30 +810,23 @@ header {
     font-size: 4.5rem;
   }
 
-  .profile-img {
-    flex: 1;
+  /* About section rules */
+  .circle-group {
+    top: 50rem;
   }
-
   .about-heading h1 {
     font-size: 8rem;
   }
-
   .about-details h3 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 400;
     color: white;
   }
-
   .about-details .nav__list {
     flex-direction: initial;
   }
-
   .about-details li {
     margin: 0 2rem;
-  }
-
-  .skills-img {
-    top: 50rem;
   }
 
   .services-img {
@@ -954,6 +953,11 @@ header {
   p {
     font-size: small;
   }
+  address {
+    display: block;
+    font-style: normal;
+    font-size: 2rem;
+  }
 
   /* Header / Hero section */
   .circle--left {
@@ -984,18 +988,23 @@ header {
     height: 30px;
   }
 
+  /* About section rules */
+  .about .container {
+    display: list-item;
+  }
+  .circle-group {
+    top: 100%;
+  }
   .about-heading h1 {
     font-size: 7rem;
   }
-
   .about-details h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 300;
     color: white;
   }
-
-  .about .container {
-    display: list-item;
+  .about-details p {
+    font-size: 2rem;
   }
 
   .services-img {
@@ -1004,14 +1013,6 @@ header {
     top: 110rem;
   }
 
-  .profile-img {
-    top: -10%;
-    margin: 0 0 7rem 0;
-  }
-
-  .skills-img {
-    top: 100%;
-  }
   .my-skills {
     border-left: 4px solid #ff5a3d;
     border-top: none;
@@ -1173,13 +1174,9 @@ header {
     font-size: 4.5rem;
     transition: color 650ms;
   }
-  address {
-    display: block;
-    font-style: normal;
-    font-size: 1.5rem;
-  }
 }
 
+/* Smaller phone view rules */
 @media screen and (max-width: 300px) {
   .landing-text h1 {
     font-size: 5rem;
@@ -1194,8 +1191,32 @@ header {
   .bar {
     height: 3px;
   }
+
+  section.about {
+    padding-top: 6rem;
+  }
+  .about-heading {
+    margin-bottom: 3.5rem;
+  }
+  .about-heading h1 {
+    font-size: 6rem;
+  }
+  .about-heading h6 {
+    font-size: 1.8rem;
+  }
+  .about-details h3 {
+    font-size: 2rem;
+  }
+  .about-details p {
+    font-size: 1.7rem;
+    line-height: 0.8cm;
+  }
+  address {
+    font-size: 1.7rem;
+  }
 }
 
+/* Smaller viewport height rules */
 @media screen and (max-height: 540px) {
   header {
     height: 540px;
@@ -1204,5 +1225,9 @@ header {
     top: 0;
     left: unset;
     transform: unset;
+  }
+
+  #about.about {
+    margin-top: 12rem;
   }
 }
