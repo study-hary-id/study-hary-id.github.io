@@ -414,8 +414,8 @@ header {
   color: #ffffff;
 }
 
-/* Achievements section rules */
-.square--left {
+/* Achievements section */
+.achievement__square {
   position: absolute;
   left: -10%;
   top: 70rem;
@@ -424,7 +424,7 @@ header {
   animation: move2 4s infinite;
 }
 
-.skills {
+.achievement__skills {
   border-top: 4px solid #ff5a3d;
   position: relative;
   margin-top: 15rem;
@@ -435,20 +435,20 @@ header {
   text-align: left;
 }
 
-.skill {
+.achievement__skills__skill {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  align-items: left;
+  align-items: flex-start;
 }
 
-/* .skill h1 {
+/* .achievement__skills__skill h1 {
   text-align: left;
   letter-spacing: 2px;
   margin: 2rem -2px 2rem 0;
 } */
 
-.skill h3 {
+.achievement__skills__skill h3 {
   text-align: left;
   color: #ffee00;
   letter-spacing: 2px;
@@ -456,38 +456,38 @@ header {
   margin: 2rem -2px 2rem 0;
 }
 
-.skills .skill {
+.achievement__skills .achievement__skills__skill {
   border-right: none;
   margin-right: 1rem;
   padding-right: 1rem;
   position: relative;
 }
 
-.skills .skill:last-of-type {
+.achievement__skills .achievement__skills__skill:last-of-type {
   padding-bottom: 0;
   margin-bottom: 0;
   border: none;
 }
 
-.skills .skill::before,
-.skills .skill::after {
+.achievement__skills .achievement__skills__skill::before,
+.achievement__skills .achievement__skills__skill::after {
   position: absolute;
   display: grid;
   left: 0%;
   transform: translateX(-50%);
 }
 
-.skills .skill::before {
+.achievement__skills .achievement__skills__skill::before {
   content: attr(data-date);
-  top: -5rem;
   text-align-last: auto;
   text-align: right;
   font-size: 1.5rem;
   color: white;
+  top: -5rem;
   margin-left: 5rem;
 }
 
-.skills .skill::after {
+.achievement__skills .achievement__skills__skill::after {
   top: -1rem;
   content: "";
   box-shadow: 0 0 0 4px #ff5a3d;
@@ -497,18 +497,18 @@ header {
   background-color: #ffe838;
 }
 
-.skills p {
+.achievement__skills p {
   font-size: 1.8rem;
   line-height: 0.7cm;
 }
 
-.skills a {
+.achievement__skills a {
   color: #ff961e;
   font-size: 1.7rem;
   text-decoration: underline;
 }
 
-.skills a:hover {
+.achievement__skills a:hover {
   color: #c26700;
 }
 
@@ -844,85 +844,37 @@ header {
     margin: 0 2rem;
   }
 
-  /* Achievements section rules */
-  .square--left {
+  /* Achievements section */
+  .achievement__square {
     top: 100rem;
   }
-  .skills {
-    border-top: 4px solid #ff5a3d;
-    position: relative;
+  .achievement__skills {
     margin-top: 10rem;
-    display: grid;
     margin-left: 3rem;
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    text-align: left;
   }
-  .skill {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-  }
-  /* .skill h1 {
+  /* .achievement__skills__skill h1 {
     text-align: left;
     letter-spacing: 1px;
     margin: 2rem -2px 2rem 0;
   } */
-  .skill h3 {
-    text-align: left;
-    color: #ffee00;
-    letter-spacing: 2px;
+  .achievement__skills__skill h3 {
     font-size: 1.8rem;
-    margin: 2rem -2px 2rem 0;
   }
-  .skill p {
+  .achievement__skills__skill p {
     font-size: 1.7rem;
   }
-  .skills .skill {
-    border-right: none;
+  .achievement__skills .achievement__skills__skill {
     margin-right: 0rem;
     padding-right: 0rem;
-    position: relative;
   }
-  .skills .skill:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border: none;
-  }
-  .skills .skill::before,
-  .skills .skill::after {
-    position: absolute;
-    display: grid;
-    left: 0%;
-    transform: translateX(-50%);
-  }
-  .skills .skill::before {
-    content: attr(data-date);
-    top: -5rem;
-    text-align-last: auto;
-    text-align: right;
+  .achievement__skills .achievement__skills__skill::before {
     min-width: 12rem;
-    font-size: 1.5rem;
-    color: white;
     text-align: center;
     margin-left: 2rem;
   }
-  .skills .skill::after {
-    top: -1rem;
-    content: "";
-    box-shadow: 0 0 0 4px #ff5a3d;
-    border-radius: 100%;
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: #ffe838;
-  }
-  .skills a {
-    color: #ff961e;
+  .achievement__skills a {
     font-size: 1.6rem;
-    text-decoration: underline;
-  }
-  .skills a:hover {
-    color: #c26700;
   }
 
   /* Portfolio section rules */
@@ -1040,90 +992,15 @@ header {
   }
 
   /* Achievements section rules */
-  .square--left {
+  .achievement__square {
     width: 22%;
     height: 15%;
     top: 110rem;
   }
-  .skills {
+  .achievement__skills {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-row-gap: 8rem;
   }
-  /* .skills {
-    border-left: 4px solid #ff5a3d;
-    border-top: none;
-    position: relative;
-    align-items: center;
-    display: grid;
-    margin: 13rem;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2.5rem;
-    text-align: left;
-  }
-  .skill {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-  }
-  .skill h3 {
-    text-align: left;
-    color: #ffee00;
-    letter-spacing: 2px;
-    font-size: 1.8rem;
-    margin: -1.5rem 1px 1rem 2rem;
-  }
-  .skills p {
-    margin-left: 2rem;
-    font-size: 1.5rem;
-  }
-  .skills .skill {
-    border-right: none;
-    margin-right: 1rem;
-    padding-right: 1rem;
-    position: relative;
-  }
-  .skills .skill:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border: none;
-  }
-  .skills .skill::before,
-  .skills .skill::after {
-    position: absolute;
-    display: grid;
-    left: 0%;
-    transform: translateX(-50%);
-  }
-  .skills .skill::before {
-    content: attr(data-date);
-    left: -9rem;
-    width: 10rem;
-    top: -1rem;
-    text-align-last: auto;
-    min-width: 10rem;
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-  }
-  .skills .skill::after {
-    top: -1rem;
-    content: "";
-    box-shadow: 0 0 0 4px #ff5a3d;
-    border-radius: 100%;
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: #ffe838;
-  }
-  .skills a {
-    color: #ff961e;
-    font-size: 1.3rem;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-  }
-  .skills a:hover {
-    color: #c26700;
-  } */
 
   /* Portfolio section rules */
   .portfolio__item {
@@ -1187,7 +1064,7 @@ header {
     margin-bottom: 1rem;
     color: #ffffff;
   }
-  .skill p,
+  .achievement__skills__skill p,
   .timeline p {
     line-height: 0.6cm;
   }
@@ -1200,84 +1077,46 @@ header {
 
 /* Normal phone view rules */
 @media screen and (max-width: 500px) {
+  /* Miscelaneous rules */
   .section--heading {
     margin-bottom: 5rem;
   }
 
+  /* Achievements section */
   section.achievements,
   section.portfolio,
   section.experience {
     padding-top: 6rem;
   }
-  .skills {
+  .achievement__skills {
     border-left: 4px solid #ff5a3d;
     border-top: none;
-    position: relative;
     align-items: center;
-    display: grid;
-    margin: 5rem 1.5rem 5rem 13rem;
+    margin: 5rem 0 5rem 10rem;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 2.5rem;
-    text-align: left;
   }
-  .skill {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-  }
-  .skill h3 {
+  .achievement__skills__skill h3 {
     margin: -1.5rem 1px 1rem 2rem;
   }
-  .skills p {
+  .achievement__skills p {
     margin-left: 2rem;
   }
-  .skills .skill {
+  .achievement__skills .achievement__skills__skill {
     border-right: none;
-    margin-right: 1rem;
-    padding-right: 1rem;
-    position: relative;
   }
-  .skills .skill:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border: none;
-  }
-  .skills .skill::before,
-  .skills .skill::after {
-    position: absolute;
-    display: grid;
-    left: 0%;
-    transform: translateX(-50%);
-  }
-  .skills .skill::before {
-    content: attr(data-date);
+  .achievement__skills .achievement__skills__skill::before {
+    top: -1rem;
     left: -9rem;
     width: 10rem;
-    top: -1rem;
-    text-align-last: auto;
     min-width: 10rem;
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
   }
-  .skills .skill::after {
-    top: -1rem;
-    content: "";
-    box-shadow: 0 0 0 4px #ff5a3d;
-    border-radius: 100%;
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: #ffe838;
-  }
-  .skills a {
+  .achievement__skills a {
     margin-left: 2rem;
     margin-bottom: 2rem;
   }
-  .skills a:hover {
-    color: #c26700;
-  }
 
+  /* Experience section */
   .timeline ul {
     width: 95%;
   }
@@ -1289,14 +1128,21 @@ header {
 
 /* Normal phone view rules */
 @media screen and (max-width: 400px) {
+  /* Achievements section */
   .achievements .container {
     margin: 0;
     width: 100%;
   }
-  .skills {
-    margin-left: 12rem;
-    margin-right: 0;
+  .achievement__skills {
+    margin-left: 6rem;
+    margin-right: 1rem;
   }
+  .achievement__skills .achievement__skills__skill::before {
+    transform: rotate(-90deg);
+    left: -11rem;
+  }
+
+  /* Experience section */
   .timeline .date::before {
     left: -10.5rem;
   }
@@ -1305,30 +1151,7 @@ header {
 /* Special breakpoint */
 /* Smaller phone view rules */
 @media screen and (max-width: 350px) {
-  .skills {
-    margin-left: 2rem;
-  }
-  .skill h3 {
-    font-size: 1.7rem;
-  }
-  .skill p,
-  .portfolio__item__description p {
-    font-size: 1.6rem;
-  }
-  .skill a {
-    font-size: 1.5rem;
-  }
-}
-
-/* Smaller phone view rules */
-@media screen and (max-width: 300px) {
-  /* Header / Hero section */
-  .landing-text h1 {
-    font-size: 5rem;
-  }
-  .landing-text h6 {
-    font-size: 1rem;
-  }
+  /* Navbar button */
   .menu--toggler {
     width: 3rem;
     height: 2rem;
@@ -1337,11 +1160,38 @@ header {
     height: 3px;
   }
 
+  /* Achievements section */
+  .achievement__skills {
+    margin-left: 2rem;
+  }
+  .achievement__skills__skill h3 {
+    font-size: 1.7rem;
+  }
+  .achievement__skills__skill p,
+  .portfolio__item__description p {
+    font-size: 1.6rem;
+  }
+  .achievement__skills__skill a {
+    font-size: 1.5rem;
+  }
+}
+
+/* Smaller phone view rules */
+@media screen and (max-width: 300px) {
+  /* Miscelaneous section */
   .section--heading h1 {
     font-size: 2.2rem;
   }
   .section--heading h6 {
     font-size: 1.7rem;
+  }
+
+  /* Header / Hero section */
+  .landing-text h1 {
+    font-size: 5rem;
+  }
+  .landing-text h6 {
+    font-size: 1rem;
   }
 
   /* About me section */
@@ -1368,6 +1218,7 @@ header {
     font-size: 1.7rem;
   }
 
+  /* Portfolio section */
   .portfolio__item__description h1 {
     font-size: 2.1rem;
   }
@@ -1376,6 +1227,7 @@ header {
     font-size: 1.4rem;
   }
 
+  /* Experience section */
   .timeline ul {
     padding: 1.5rem;
     width: 100%;
@@ -1398,6 +1250,7 @@ header {
     transform: unset;
   }
 
+  /* About me section */
   section.about {
     margin-top: 12rem;
   }
