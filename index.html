@@ -4,8 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Showcase</title>
-    <link type="text/css" rel="stylesheet" href="static/css/style.css" />
+
+    <meta name="author" content="Muhammad (Ravie) Haryansyah, study-hary-id" />
+    <meta
+      name="generator"
+      content="Muhammad (Ravie) Haryansyah, study-hary-id"
+    />
+    <meta
+      name="description"
+      content="My portfolio website to show achievements, portfolio, and my experience as a software engineer."
+    />
+    <title>Portfolio Website | Muhammad Haryansyah | study-hary-id</title>
+
     <link type="image/x-icon" rel="icon" href="assets/favicon/favicon.ico" />
 
     <!-- aos library is used to provide and implement animations -->
@@ -18,40 +28,60 @@
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     />
+
+    <!-- custom fonts from onlinewebfonts, includes: Gotham, Gotham Medium, The Historia Demo -->
+    <link
+      href="//db.onlinewebfonts.com/c/bd317adf74e5e7e564eb61ce9926cc6d?family=Gotham"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="//db.onlinewebfonts.com/c/9a2bc11be56851dde98c1b49302cc21a?family=Gotham+Medium"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="//db.onlinewebfonts.com/c/0923ee644c97a87d70269aa80a6f1e79?family=The+Historia+Demo"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link type="text/css" rel="stylesheet" href="static/css/style.css" />
   </head>
 
   <body>
     <!-- Header section is used to first landing for visitor -->
     <header>
-      <div class="left-circle">
+      <div class="header__circle--left">
+        <img alt="Header left circle" src="assets/svg/header-left-circle.svg" />
+      </div>
+      <div class="header__circle--right">
         <img
-          alt="Left Circle Group"
-          src="assets/images/left-circle-group.svg"
+          alt="Header right circle"
+          src="assets/svg/header-right-circle.svg"
         />
       </div>
-      <div class="right-circle">
-        <img
-          alt="Right Circle Group"
-          src="assets/images/right-circle-group.svg"
-        />
-      </div>
-      <div class="menu-toggler">
+      <div class="menu--toggler">
         <div class="bar half start"></div>
         <div class="bar"></div>
         <div class="bar half end"></div>
       </div>
 
       <nav class="top-nav">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#achievements" class="nav-link">Achievements</a></li>
-          <!-- <li><a href="#portfolio" class="nav-link">Portfolio</a></li> -->
+        <ul class="nav__list">
+          <li><a href="#" class="nav__list--link">Home</a></li>
+          <li><a href="#about" class="nav__list--link">About</a></li>
+          <li>
+            <a href="#achievements" class="nav__list--link">Achievements</a>
+          </li>
+          <li><a href="#portfolio" class="nav__list--link">Portfolio</a></li>
+          <li><a href="#experience" class="nav__list--link">Experience</a></li>
         </ul>
       </nav>
 
       <div class="landing-text">
         <h1>Muhammad Haryansyah</h1>
+        <h6>Software Engineer | Backend Engineer</h6>
         <div class="scrolldown">
           <span></span>
           <span></span>
@@ -63,15 +93,12 @@
     <!-- About section is used to explain about ourselves -->
     <section class="about" id="about">
       <div class="container">
-        <div class="circle-img">
-          <img
-            alt="Blue Circle Group"
-            src="assets/images/blue-circle-group.svg"
-          />
+        <div class="about__circle">
+          <img alt="About circle" src="assets/svg/about-circle.svg" />
         </div>
 
-        <div class="about-details" data-aos="fade-up" data-aos-delay="300ms">
-          <div class="about-heading">
+        <div class="about__details" data-aos="fade-up" data-aos-delay="300ms">
+          <div class="about__details__header">
             <h1>About</h1>
             <h6>Myself</h6>
           </div>
@@ -86,10 +113,9 @@
             <strong>Backend Development</strong> and
             <strong>Artificial Intelligence</strong> or
             <strong>Machine Learning</strong>. Also has more interest in
-            <strong>FOSS</strong>, <strong>Go</strong> lang and
-            <strong>Python</strong> programming language. I also have experience
-            for <strong>Frontend Development</strong> for mobile and desktop
-            application. <br /><br />
+            designing, enhancing, and maintaining web applications using
+            <strong>Go</strong>, <strong>Python</strong>, and
+            <strong>JavaScript</strong>.<br /><br />
             <a
               href="https://linkedin.com/in/study-hary-id"
               class="cta"
@@ -99,16 +125,15 @@
               Checkout my Resume
             </a>
           </p>
+
           <br />
           <address>
             Contact me here
-            <a href="mailto:haryansyah.person.id@gmail.com">
-              haryansyah.person.id@gmail.com
-            </a>
+            <a href="mailto:haryansyah.person.id@gmail.com">&lt;email&gt;</a>
           </address>
 
           <div class="social-media">
-            <ul class="nav-list">
+            <ul class="nav__list">
               <li>
                 <a
                   href="https://linkedin.com/in/study-hary-id"
@@ -148,20 +173,24 @@
     <!-- Achievements section is used to show your progress or your timeline progress -->
     <section class="achievements" id="achievements">
       <div class="container">
-        <!-- <div class="square-img">
+        <div class="achievement__square">
           <img
-            alt="Left Rectangle Group"
-            src="assets/images/left-rectangle-group.svg"
+            alt="Achievement square"
+            src="assets/svg/achievement-square.svg"
           />
-        </div> -->
-        <div class="heading-section">
+        </div>
+        <div class="section--heading">
           <h1>Achievements</h1>
           <h6>Some honourable mentions</h6>
         </div>
 
-        <div class="skills" data-aos="fade-right" data-aos-delay="100ms">
+        <div
+          class="achievement__skills"
+          data-aos="fade-right"
+          data-aos-delay="100ms"
+        >
           <div
-            class="skill"
+            class="achievement__skills__skill"
             data-date="25 December 2020"
             data-aos="fade-right"
             data-aos-delay="300ms"
@@ -183,7 +212,7 @@
           </div>
 
           <div
-            class="skill"
+            class="achievement__skills__skill"
             data-date="27 December 2020"
             data-aos="fade-right"
             data-aos-delay="300ms"
@@ -191,7 +220,7 @@
             <h3>Command Line Certificate</h3>
             <p>
               Complete learning fundamentals command line and common unix
-              command line.
+              commands line.
             </p>
             <br />
             <a
@@ -205,7 +234,7 @@
           </div>
 
           <div
-            class="skill"
+            class="achievement__skills__skill"
             data-date="23 February 2021"
             data-aos="fade-right"
             data-aos-delay="300ms"
@@ -225,50 +254,286 @@
               View cetificate
             </a>
           </div>
+
+          <div
+            class="achievement__skills__skill"
+            data-date="10 June 2021"
+            data-aos="fade-right"
+            data-aos-delay="300ms"
+          >
+            <h3>JavaScript Fundamentals</h3>
+            <p>
+              Master basic JavaScript for web development especially for
+              Back-end web development using Node.JS
+            </p>
+            <br />
+            <a
+              href="https://www.dicoding.com/certificates/RVZK42Y6NPD5"
+              class="cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View certificate
+            </a>
+          </div>
+
+          <div
+            class="achievement__skills__skill"
+            data-date="17 June 2021"
+            data-aos="fade-right"
+            data-aos-delay="300ms"
+          >
+            <h3>Cloud Practitioner Essentials</h3>
+            <p>
+              Learn and understand the Basic AWS Cloud with all types of
+              services, global infrastructure, and prices.
+            </p>
+            <br />
+            <a
+              href="https://www.dicoding.com/certificates/4EXGY0RYDXRL"
+              class="cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View certificate
+            </a>
+          </div>
+
+          <div
+            class="achievement__skills__skill"
+            data-date="28 June 2021"
+            data-aos="fade-right"
+            data-aos-delay="300ms"
+          >
+            <h3>Create Back-end Application</h3>
+            <p>
+              Create a simple RESTful API to support the functionality of an
+              application with Node.JS and Hapi.
+            </p>
+            <br />
+            <a
+              href="https://www.dicoding.com/certificates/ERZR5Q1WMPYV"
+              class="cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View cetificate
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Portfolio section is used to showcase your projects that has created -->
-    <!-- <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
-        <div class="heading-section">
-          <h1>My Portfolio</h1>
+        <div class="section--heading">
+          <h1>My Portfolios</h1>
           <h6>Some of my recent works</h6>
         </div>
 
-    <div class="portfolio-item" data-aos="fade-in" data-aos-delay="300ms">
-          <div class="portfolio-img margin-right">
-            <img alt="" src="" />
+        <div
+          class="portfolio__item"
+          data-aos="fade-in"
+          data-aos-duration="300ms"
+        >
+          <div class="portfolio__item__img has-margin-right">
+            <img
+              src="assets/images/javascript-simple-applications.png"
+              alt="JavaScript simple applications project"
+            />
           </div>
-          <div class="portfolio-description">
-            <h6>Category of portfolio</h6>
-            <h1>The name of the portfolio</h1>
-            <p>The description of the portfolio</p>
-            <a href="" class="cta">View portfolio</a>
+          <div class="portfolio__item__description">
+            <h6>Frontend Development</h6>
+            <h1>JavaScript Simple Application</h1>
+            <p>
+              This project is a site showing simple applications/projects built
+              with JavaScript, this project only contains JavaScript on client
+              side aka Frontend 👍.
+            </p>
+            <a
+              href="https://github.com/study-hary-id/javascript-simple-applications"
+              class="cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View Source Code</a
+            >
           </div>
         </div>
-
-        <div class="portfolio-item" data-aos="fade-in" data-aos-delay="300ms">
-          <div class="portfolio-img margin-left">
-            <img alt="" src="" />
+        <div
+          class="portfolio__item"
+          data-aos="fade-in"
+          data-aos-duration="300ms"
+        >
+          <div class="portfolio__item__description">
+            <h6>RESTful Web Services</h6>
+            <h1>Roman Numeral API</h1>
+            <p>
+              Simple REST API to convert/<code>GET</code> ordinary number to
+              roman numeral. This REST API doesn't use any frameworks, only use
+              builtin package <code>net/http</code>. And no database
+              implementation.
+            </p>
+            <a
+              href="https://github.com/study-hary-id/roman-numeral-api"
+              class="cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View Source Code</a
+            >
           </div>
-          <div class="portfolio-description margin-right">
-            <h6>Category of portfolio</h6>
-            <h1>The name of the portfolio</h1>
-            <p>The description of the portfolio</p>
-            <a href="" class="cta">View portfolio</a>
+          <div class="portfolio__item__img has-margin-left">
+            <img
+              src="assets/images/roman-numeral-api.png"
+              alt="Roman numeral REST API"
+            />
           </div>
         </div>
-    </div>
-    </section> -->
-
-    <footer class="copyright">
-      <div class="up" id="up">
-        <i class="fas fa-chevron-up"></i>
+        <div
+          class="portfolio__item"
+          data-aos="fade-in"
+          data-aos-duration="300ms"
+        >
+          <div class="portfolio__item__img has-margin-right">
+            <img
+              src="assets/images/simple-todos.png"
+              alt="Django simple todos app"
+            />
+          </div>
+          <div class="portfolio__item__description">
+            <h6>Application Development</h6>
+            <h1>Django Simple To-Do</h1>
+            <p>
+              I made an application about a simple To-Do list which basically
+              had the capabilty of add a new To-Do, complete the To-Do and clear
+              completed To-Do.
+            </p>
+            <a
+              href="https://github.com/study-hary-id/simple-todos"
+              class="cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View Source Code</a
+            >
+          </div>
+        </div>
+        <div class="portfolio__square">
+          <img src="assets/svg/portfolio-square.svg" alt="Portfolio square" />
+        </div>
       </div>
-      <p>&copy; 2021 Muhammad Haryansyah. All rights reserved</p>
-    </footer>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="container">
+        <div class="section--heading">
+          <h1>My Experience</h1>
+          <h6>Some of my work experience</h6>
+        </div>
+        <div class="timeline">
+          <ul>
+            <li
+              class="timeline__item"
+              data-date="Sep 2021 - Current"
+              data-aos="fade-up"
+              data-aos-duration="300ms"
+            >
+              <h1>Software Engineer | Fullstack Engineer</h1>
+              <div class="timeline__item--border-bottom">
+                <p>
+                  Develop an internal Courier Management System from client
+                  which is a cross platform app with capabiliy of realtime
+                  courier tracking and realtime management system.
+                </p>
+                <br />
+                <a
+                  href="https://antdonk.co.id"
+                  class="cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Antdonk Website</a
+                >
+              </div>
+              <div>
+                <p>
+                  Develop a fishing e-commerce with multivendor feature from
+                  client which is a cross platform app with live chat,
+                  live-stream and book a fishing place or boat.
+                </p>
+                <br />
+                <a
+                  href="https://angleres.com"
+                  class="cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Angleres Website</a
+                >
+              </div>
+            </li>
+
+            <!-- <li
+              class="timeline__item"
+              data-date="Sep 2021 - Now"
+              data-aos="fade-up"
+              data-aos-duration="300ms"
+            >
+              <h1>Software Engineer | Fullstack Engineer</h1>
+
+              <p>
+                Develop an internal Courier Management System from client which
+                is a cross platform app with capabiliy of realtime courier
+                tracking and realtime management system.
+              </p>
+              <br />
+              <a
+                href="https://antdonk.co.id"
+                class="cta"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Antdonk Website</a
+              >
+            </li> -->
+
+            <!-- <li
+              class="timeline__item"
+              data-date="Sep 2021 - Now"
+              data-aos="fade-up"
+              data-aos-duration="300ms"
+            >
+              <h1>Software Engineer | Fullstack Engineer</h1>
+
+              <p>
+                Develop an internal Courier Management System from client which
+                is a cross platform app with capabiliy of realtime courier
+                tracking and realtime management system.
+              </p>
+              <br />
+              <a
+                href="https://antdonk.co.id"
+                class="cta"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Antdonk Website</a
+              >
+            </li> -->
+          </ul>
+          <div class="experience__circle">
+            <img
+              src="assets/svg/experience-circle.svg"
+              alt="Experience circle"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <footer class="copyright">
+        <div class="up" id="up">
+          <i class="fas fa-chevron-up"></i>
+        </div>
+        <p>©️ 2021 - 2022 Muhammad Haryansyah. All rights reserved</p>
+      </footer>
+    </div>
 
     <!-- The JavaScript files that used to implement the animations -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
