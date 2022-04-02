@@ -567,51 +567,41 @@ header {
   animation: move 4s infinite;
 }
 
-/* Experience section rules */
+/* Experience section */
 .timeline ul {
   border-left: 4px solid #ffe838;
   border-radius: 0.8rem;
   background-color: rgba(29, 29, 29, 0.616);
   margin: 0 auto;
-  position: relative;
   padding: 5rem;
+  position: relative;
   list-style: none;
   text-align: left;
   width: 70%;
 }
 
-.timeline h1 {
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 400;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #ffffff;
-}
-
-.timeline .date {
+.timeline .timeline__item {
   border-bottom: 1px solid rgba(255, 255, 255, 0.281);
   margin-bottom: 3rem;
   padding-bottom: 1rem;
   position: relative;
 }
 
-.timeline .date:last-of-type {
+.timeline .timeline__item:last-of-type {
   padding-bottom: 0;
   margin-bottom: 0;
   border: none;
 }
 
-.timeline .date::before,
-.timeline .date::after {
+.timeline .timeline__item::before,
+.timeline .timeline__item::after {
   position: absolute;
   display: block;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.timeline .date::before {
+.timeline .timeline__item::before {
   content: attr(data-date);
   left: -25rem;
   text-align: right;
@@ -622,7 +612,7 @@ header {
   text-align: center;
 }
 
-.timeline .date::after {
+.timeline .timeline__item::after {
   content: "";
   left: -8rem;
   box-shadow: 0 0 0 4px #ffe838;
@@ -632,11 +622,21 @@ header {
   background-color: #313534;
 }
 
-.timeline .timeline--bordered {
+.timeline .timeline__item--border-bottom {
   border-bottom: 1px solid rgba(255, 255, 255, 0.281);
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   position: relative;
+}
+
+.timeline h1 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
 }
 
 .timeline p {
@@ -653,7 +653,7 @@ header {
   color: #cf8906;
 }
 
-.circle-group--left {
+.experience__circle {
   position: relative;
   left: -10%;
   width: 15%;
@@ -790,7 +790,7 @@ header {
     flex-direction: column;
   }
 
-  .timeline .date::before {
+  .timeline .timeline__item::before {
     left: -22rem;
   }
 }
@@ -898,23 +898,22 @@ header {
     font-size: 4rem;
   } */
 
-  /* Experience section rules */
+  /* Experience section */
   .timeline ul {
     margin: 0 0 0 auto;
   }
-  .timeline .date {
+  .timeline .timeline__item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.281);
-    font-size: 1rem;
     padding-bottom: 1rem;
     position: relative;
   }
-  .timeline .date::before {
+  .timeline .timeline__item::before {
     font-size: 1.3rem;
     padding-left: 1rem;
     width: 5rem;
     text-align: center;
   }
-  /* .timeline .date::after {
+  /* .timeline .timeline__item::after {
     left: -5.9rem;
   } */
   .timeline h1,
@@ -925,6 +924,7 @@ header {
     font-size: 1.6rem;
   }
 
+  /* Footer rules */
   .up {
     right: 0.5rem;
   }
@@ -1048,17 +1048,17 @@ header {
     padding: 2.5rem;
     width: 80%;
   }
-  .timeline .date {
+  .timeline .timeline__item {
     margin: 0;
     margin-bottom: 3rem;
   }
-  .timeline .date::before {
+  .timeline .timeline__item::before {
     left: -15rem;
     width: 5rem;
     min-width: 10rem;
     text-align: center;
   }
-  .timeline .date::after {
+  .timeline .timeline__item::after {
     left: -3.5rem;
   }
   .timeline h1 {
@@ -1067,11 +1067,11 @@ header {
     margin-bottom: 1rem;
     color: #ffffff;
   }
-  .achievement__skills__skill p,
-  .timeline p {
+  .achievement__skills__skill p {
     line-height: 0.6cm;
   }
 
+  /* Footer rules */
   .up {
     right: 0.5rem;
     top: -3.5rem;
@@ -1123,7 +1123,7 @@ header {
   .timeline ul {
     width: 95%;
   }
-  .timeline .date::before {
+  .timeline .timeline__item::before {
     left: -11rem;
     transform: rotate(-90deg);
   }
@@ -1146,7 +1146,7 @@ header {
   }
 
   /* Experience section */
-  .timeline .date::before {
+  .timeline .timeline__item::before {
     left: -10.5rem;
   }
 }
@@ -1176,6 +1176,15 @@ header {
   }
   .achievement__skills__skill a {
     font-size: 1.5rem;
+  }
+
+  /* Experience section */
+  .timeline ul {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  .timeline .timeline__item::after {
+    left: -2.5rem;
   }
 }
 
@@ -1228,15 +1237,6 @@ header {
   .portfolio__item__description h6,
   .portfolio__item__description .cta {
     font-size: 1.4rem;
-  }
-
-  /* Experience section */
-  .timeline ul {
-    padding: 1.5rem;
-    width: 100%;
-  }
-  .timeline .date::after {
-    left: -2.5rem;
   }
 }
 
