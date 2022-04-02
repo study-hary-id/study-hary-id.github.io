@@ -1314,6 +1314,10 @@ header {
   .portfolio__item__description h1 {
     font-size: 2.1rem;
   }
+  .portfolio__item__description h6,
+  .portfolio__item__description .cta {
+    font-size: 1.4rem;
+  }
 }
 
 /* Smaller viewport height rules */
