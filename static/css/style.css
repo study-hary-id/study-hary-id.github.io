@@ -512,28 +512,33 @@ header {
   color: #c26700;
 }
 
-/* Portfolio section rules */
+/* Portfolio section */
 .portfolio__item {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
 }
+
 .portfolio__item:last-child {
   margin-bottom: 0;
 }
+
 .portfolio__item__img {
   flex: 0.9;
 }
+
 .portfolio__item__description {
   flex: 1;
   font-size: 4rem;
 }
+
 .portfolio__item__description h1 {
   font-size: 3rem;
   margin: 1rem 0;
   font-weight: 400;
 }
+
 .portfolio__item__description h6 {
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -541,6 +546,7 @@ header {
   opacity: 0.6;
   margin-bottom: 0rem;
 }
+
 .portfolio__item__description .cta {
   display: inline-block;
   margin-top: 2.5rem;
@@ -548,10 +554,12 @@ header {
   text-transform: uppercase;
   color: #2e89ff;
 }
+
 .portfolio__item__description .cta:hover {
   color: #0059ff;
 }
-.square--right {
+
+.portfolio__square {
   position: absolute;
   height: 50%;
   width: 20%;
@@ -795,9 +803,9 @@ header {
     background: black no-repeat center fixed;
     background-size: cover;
   }
-  p {
+  /* p {
     font-size: small;
-  }
+  } */
 
   /* Miscelaneous rules */
   .section--heading h1 {
@@ -877,12 +885,9 @@ header {
     font-size: 1.6rem;
   }
 
-  /* Portfolio section rules */
+  /* Portfolio section */
   .portfolio__item__description h1 {
     font-size: 2.5rem;
-  }
-  .portfolio__item__description p {
-    font-size: 1.8rem;
   }
 
   /* .icon-container {
@@ -892,6 +897,7 @@ header {
   .icon-container i {
     font-size: 4rem;
   } */
+
   /* Experience section rules */
   .timeline ul {
     margin: 0 0 0 auto;
@@ -927,9 +933,9 @@ header {
 /* Different breakpoint */
 /* Wider phone view / Tablet */
 @media screen and (max-width: 600px) {
-  p {
+  /* p {
     font-size: small;
-  }
+  } */
   address {
     display: block;
     font-style: normal;
@@ -1011,7 +1017,6 @@ header {
   }
   .portfolio__item__description {
     flex: 1;
-    font-size: 1.5rem;
   }
   .portfolio__item__description h1 {
     font-size: 2.25rem;
@@ -1019,7 +1024,6 @@ header {
     font-weight: 400;
   }
   .portfolio__item__description h6 {
-    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 300;
     opacity: 0.6;
@@ -1027,7 +1031,6 @@ header {
   .portfolio__item__description .cta {
     display: inline-block;
     margin-top: 2.5rem;
-    font-size: 1.5rem;
     text-transform: uppercase;
     color: #2e89ff;
   }
@@ -1035,7 +1038,7 @@ header {
     margin: 0;
     order: 2;
   }
-  .square--right {
+  .portfolio__square {
     width: 25%;
     height: 25%;
   }
