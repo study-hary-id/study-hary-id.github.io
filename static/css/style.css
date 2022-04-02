@@ -442,8 +442,9 @@ header {
   position: relative;
   margin-top: 15rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 10rem;
   text-align: left;
 }
 
@@ -524,55 +525,55 @@ header {
   color: #c26700;
 }
 
-/*Start portfolio*/
-.portfolio-item {
+/* Portfolio section rules */
+.portfolio__item {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
 }
-.portfolio-item:last-child {
+.portfolio__item:last-child {
   margin-bottom: 0;
 }
-
-.portfolio-img {
+.portfolio__item__img {
   flex: 0.9;
 }
-
-.portfolio-description {
+.portfolio__item__description {
   flex: 1;
   font-size: 4rem;
 }
-
-.portfolio-description h1 {
+.portfolio__item__description h1 {
   font-size: 3rem;
   margin: 1rem 0;
   font-weight: 400;
 }
-.portfolio-description h6 {
+.portfolio__item__description h6 {
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 350;
   opacity: 0.6;
   margin-bottom: 0rem;
 }
-
-.portfolio-description .cta {
+.portfolio__item__description .cta {
   display: inline-block;
   margin-top: 2.5rem;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #2e89ff;
 }
-
-.portfolio-description .cta:hover {
+.portfolio__item__description .cta:hover {
   color: #0059ff;
 }
-
-/*End services*/
+.square--right {
+  position: absolute;
+  height: 50%;
+  width: 20%;
+  right: 0%;
+  animation: move 4s infinite;
+}
 
 /*Start timeline*/
-.timeline ul {
+/* .timeline ul {
   border-left: 4px solid #ffe838;
   border-radius: 0.8rem;
   background-color: rgba(29, 29, 29, 0.616);
@@ -642,13 +643,6 @@ header {
   width: 1.5rem;
   background-color: #313534;
 }
-.experience-img {
-  position: absolute;
-  height: 50%;
-  width: 20%;
-  right: 0%;
-  animation: move 4s infinite;
-}
 
 .contact-img {
   position: relative;
@@ -656,15 +650,14 @@ header {
   width: 15%;
   height: 15%;
   animation: move2 4s infinite;
-}
-
+} */
 /*End timeline*/
 
 /*Start contact*/
 /*End contact*/
 
 /*Start footer*/
-.copyright {
+/* .copyright {
   width: 100%;
   text-align: center;
   vertical-align: middle;
@@ -698,8 +691,7 @@ header {
   color: black;
   font-weight: 600;
   font-family: "Gotham Medium";
-}
-
+} */
 /*End footer*/
 
 /*Start animations*/
@@ -762,7 +754,6 @@ header {
     box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
   }
 }
-
 /*End animations*/
 
 /* Start media queries */
@@ -843,7 +834,6 @@ header {
     display: grid;
     margin-left: 3rem;
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    grid-row-gap: 10rem;
     text-align: left;
   }
   .skill {
@@ -914,19 +904,24 @@ header {
     color: #c26700;
   }
 
+  /* Portfolio section rules */
+  .portfolio__item__description h1 {
+    font-size: 2.5rem;
+  }
+  .portfolio__item__description p {
+    font-size: 1.8rem;
+  }
+
   .icon-container {
     width: 7rem;
     height: 7rem;
   }
-
   .icon-container i {
     font-size: 4rem;
   }
-
   .timeline ul {
     margin: 0 0 0 auto;
   }
-
   .timeline .date::before {
     left: -20rem;
   }
@@ -936,7 +931,6 @@ header {
     width: 5rem;
     text-align: center;
   }
-
   .timeline .date::after {
     left: -5.9rem;
   }
@@ -1006,6 +1000,13 @@ header {
   }
   .about-details p {
     font-size: 2rem;
+  }
+  .social-media {
+    margin-top: 5rem;
+  }
+  .social-media i {
+    font-size: 4.5rem;
+    transition: color 650ms;
   }
 
   /* Achievements section rules */
@@ -1094,50 +1095,48 @@ header {
     color: #c26700;
   } */
 
-  .portfolio-item {
+  /* Portfolio section rules */
+  .portfolio__item {
     flex-direction: column;
   }
-
-  .portfolio-description {
+  .portfolio__item__img {
+    margin: 0 0 2rem 0;
+  }
+  .portfolio__item__description {
     flex: 1;
     font-size: 1.5rem;
   }
-
-  .portfolio-description h1 {
-    font-size: 2rem;
+  .portfolio__item__description h1 {
+    font-size: 2.25rem;
     margin: 1rem 0rem;
     font-weight: 400;
   }
-
-  .portfolio-description h6 {
+  .portfolio__item__description h6 {
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 300;
     opacity: 0.6;
-    font-family: "Gotham Medium";
   }
-
-  .portfolio-description .cta {
+  .portfolio__item__description .cta {
     display: inline-block;
     margin-top: 2.5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
     color: #2e89ff;
   }
-
-  .portfolio-img {
-    margin: 0 0 2rem 0;
-  }
-  .portfolio-description {
+  .portfolio__item__description {
     margin: 0;
     order: 2;
+  }
+  .square--right {
+    width: 25%;
+    height: 25%;
   }
 
   .timeline p {
     font-size: 1.3rem;
     line-height: 0.5cm;
   }
-
   .timeline .date::before {
     font-size: 1.3rem;
     left: -18rem;
@@ -1145,32 +1144,16 @@ header {
     min-width: 10rem;
     text-align: center;
   }
-
   .timeline h1 {
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 1rem;
-
     color: #ffffff;
-  }
-
-  .experience-img {
-    width: 25%;
-    height: 25%;
   }
 
   .up {
     right: 2rem;
-  }
-
-  .social-media {
-    margin-top: 5rem;
-  }
-
-  .social-media i {
-    font-size: 4.5rem;
-    transition: color 650ms;
   }
 }
 
@@ -1180,7 +1163,8 @@ header {
     margin-bottom: 5rem;
   }
 
-  section.achievements {
+  section.achievements,
+  section.portfolio {
     padding-top: 6rem;
   }
   .skills {
@@ -1253,6 +1237,34 @@ header {
   }
 }
 
+/* Normal phone view rules */
+@media screen and (max-width: 400px) {
+  .achievements .container {
+    margin: 0;
+    width: 100%;
+  }
+  .skills {
+    margin-left: 12rem;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .skills {
+    margin-left: 2rem;
+  }
+  .skill h3 {
+    font-size: 1.7rem;
+  }
+  .skill p,
+  .portfolio__item__description p {
+    font-size: 1.6rem;
+  }
+  .skill a {
+    font-size: 1.5rem;
+  }
+}
+
 /* Smaller phone view rules */
 @media screen and (max-width: 300px) {
   .landing-text h1 {
@@ -1299,17 +1311,8 @@ header {
     font-size: 1.7rem;
   }
 
-  .skills {
-    margin: 0;
-  }
-  .skill h3 {
-    font-size: 1.7rem;
-  }
-  .skill p {
-    font-size: 1.6rem;
-  }
-  .skill a {
-    font-size: 1.5rem;
+  .portfolio__item__description h1 {
+    font-size: 2.1rem;
   }
 }
 
