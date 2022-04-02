@@ -322,7 +322,7 @@ header {
   animation-delay: 0s;
 }
 
-/* About section rules */
+/* About me section */
 .container {
   position: relative;
 }
@@ -333,49 +333,49 @@ header {
   justify-content: center;
 }
 
-.circle-group {
+.about__circle {
   position: absolute;
-  width: 25%;
   height: 15%;
+  width: 25%;
   top: 100%;
   right: 0%;
   animation: move2 4s infinite;
 }
 
-.about-details {
+.about__details {
   flex: 1;
 }
 
-.about-details a:hover {
+.about__details a:hover {
   color: #0059ff;
 }
 
-.about-heading {
-  text-align: center;
+.about__details__header {
   text-transform: uppercase;
+  text-align: center;
   line-height: 0;
   margin-bottom: 6rem;
 }
 
-.about-heading h1 {
+.about__details__header h1 {
   font-size: 10rem;
   opacity: 0.3;
   font-weight: 500;
 }
 
-.about-heading h6 {
+.about__details__header h6 {
   font-size: 2rem;
   font-weight: 400;
 }
 
-.about-details h3 {
+.about__details h3 {
   color: white;
   font-size: 4rem;
   font-weight: 400;
   text-align: center;
 }
 
-.about-details p {
+.about__details p {
   font-size: 2.5rem;
   text-align: center;
   line-height: 1cm;
@@ -393,18 +393,23 @@ header {
 .fa-linkedin:hover {
   color: #ffffff;
 }
+
 .fa-github-square:hover {
   color: #ffffff;
 }
+
 .fa-facebook-square:hover {
   color: #ffffff;
 }
+
 .fa-medium:hover {
   color: #ffffff;
 }
+
 .fa-behance-square:hover {
   color: #ffffff;
 }
+
 .fa-twitter-square:hover {
   color: #ffffff;
 }
@@ -769,6 +774,7 @@ header {
 
 /* Start media queries */
 @media screen and (max-width: 991px) {
+  /* Header / Hero section */
   .top-nav li {
     margin: 2rem 0;
   }
@@ -819,22 +825,22 @@ header {
     font-size: 4.5rem;
   }
 
-  /* About section rules */
-  .circle-group {
+  /* About me section */
+  .about__circle {
     top: 50rem;
   }
-  .about-heading h1 {
+  .about__details__header h1 {
     font-size: 8rem;
   }
-  .about-details h3 {
+  .about__details h3 {
     font-size: 3rem;
     font-weight: 400;
     color: white;
   }
-  .about-details .nav__list {
+  .about__details .nav__list {
     flex-direction: initial;
   }
-  .about-details li {
+  .about__details li {
     margin: 0 2rem;
   }
 
@@ -1007,22 +1013,22 @@ header {
     height: 30px;
   }
 
-  /* About section rules */
+  /* About me section */
   .about .container {
     display: list-item;
   }
-  .circle-group {
+  .about__circle {
     top: 100%;
   }
-  .about-heading h1 {
+  .about__details__header h1 {
     font-size: 7rem;
   }
-  .about-details h3 {
+  .about__details h3 {
     font-size: 2.5rem;
     font-weight: 300;
     color: white;
   }
-  .about-details p {
+  .about__details p {
     font-size: 2rem;
   }
   .social-media {
@@ -1296,6 +1302,7 @@ header {
   }
 }
 
+/* Special breakpoint */
 /* Smaller phone view rules */
 @media screen and (max-width: 350px) {
   .skills {
@@ -1337,22 +1344,23 @@ header {
     font-size: 1.7rem;
   }
 
+  /* About me section */
   section.about {
     padding-top: 6rem;
   }
-  .about-heading {
+  .about__details__header {
     margin-bottom: 3.5rem;
   }
-  .about-heading h1 {
+  .about__details__header h1 {
     font-size: 6rem;
   }
-  .about-heading h6 {
+  .about__details__header h6 {
     font-size: 1.8rem;
   }
-  .about-details h3 {
+  .about__details h3 {
     font-size: 2rem;
   }
-  .about-details p {
+  .about__details p {
     font-size: 1.7rem;
     line-height: 0.8cm;
   }
@@ -1377,6 +1385,7 @@ header {
   }
 }
 
+/* Height breakpoint */
 /* Smaller viewport height rules */
 @media screen and (max-height: 540px) {
   /* Header / Hero section */
@@ -1389,7 +1398,7 @@ header {
     transform: unset;
   }
 
-  #about.about {
+  section.about {
     margin-top: 12rem;
   }
 }
