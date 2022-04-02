@@ -321,25 +321,6 @@ header {
   animation-delay: 0s;
 }
 
-@keyframes animate {
-  0% {
-    top: -5px;
-    left: -5px;
-    opacity: 0;
-  }
-  25% {
-    top: 0px;
-    left: 0px;
-    opacity: 1;
-  }
-  50%,
-  100% {
-    top: 5px;
-    left: 5px;
-    opacity: 0;
-  }
-}
-
 /* About section rules */
 .container {
   position: relative;
@@ -572,8 +553,8 @@ header {
   animation: move 4s infinite;
 }
 
-/*Start timeline*/
-/* .timeline ul {
+/* Experience section rules */
+.timeline ul {
   border-left: 4px solid #ffe838;
   border-radius: 0.8rem;
   background-color: rgba(29, 29, 29, 0.616);
@@ -588,14 +569,16 @@ header {
 .timeline h1 {
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-align: center;
   font-weight: 400;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #ffffff;
 }
 
 .timeline .date {
   border-bottom: 1px solid rgba(255, 255, 255, 0.281);
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   padding-bottom: 1rem;
   position: relative;
 }
@@ -613,15 +596,6 @@ header {
   top: 50%;
   transform: translateY(-50%);
 }
-.timeline a {
-  text-decoration: underline;
-  color: #ffae17;
-  font-size: 1.5rem;
-}
-
-.timeline a:hover {
-  color: #cf8906;
-}
 
 .timeline .date::before {
   content: attr(data-date);
@@ -636,25 +610,42 @@ header {
 
 .timeline .date::after {
   content: "";
+  left: -8rem;
   box-shadow: 0 0 0 4px #ffe838;
   border-radius: 100%;
-  left: -8rem;
   height: 1.5rem;
   width: 1.5rem;
   background-color: #313534;
 }
 
-.contact-img {
+.timeline .timeline--bordered {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.281);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.timeline p {
+  line-height: 0.7cm;
+}
+
+.timeline a {
+  text-decoration: underline;
+  color: #ffae17;
+  font-size: 1.7rem;
+}
+
+.timeline a:hover {
+  color: #cf8906;
+}
+
+.circle-group--left {
   position: relative;
   left: -10%;
   width: 15%;
   height: 15%;
   animation: move2 4s infinite;
-} */
-/*End timeline*/
-
-/*Start contact*/
-/*End contact*/
+}
 
 /*Start footer*/
 /* .copyright {
@@ -695,6 +686,24 @@ header {
 /*End footer*/
 
 /*Start animations*/
+@keyframes animate {
+  0% {
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+  25% {
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+  }
+  50%,
+  100% {
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+  }
+}
 @keyframes move {
   0% {
     transform: scale(0.95);
@@ -763,6 +772,10 @@ header {
   }
   .top-nav .nav__list {
     flex-direction: column;
+  }
+
+  .timeline .date::before {
+    left: -22rem;
   }
 }
 
@@ -912,18 +925,22 @@ header {
     font-size: 1.8rem;
   }
 
-  .icon-container {
+  /* .icon-container {
     width: 7rem;
     height: 7rem;
   }
   .icon-container i {
     font-size: 4rem;
-  }
+  } */
+  /* Experience section rules */
   .timeline ul {
     margin: 0 0 0 auto;
   }
-  .timeline .date::before {
-    left: -20rem;
+  .timeline .date {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.281);
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
   }
   .timeline .date::before {
     font-size: 1.3rem;
@@ -931,15 +948,15 @@ header {
     width: 5rem;
     text-align: center;
   }
-  .timeline .date::after {
+  /* .timeline .date::after {
     left: -5.9rem;
+  } */
+  .timeline h1,
+  .timeline p {
+    font-size: 1.7rem;
   }
-  .timeline .date {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.281);
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    padding-bottom: 1rem;
-    position: relative;
+  .timeline .cta {
+    font-size: 1.6rem;
   }
 }
 
@@ -1133,23 +1150,33 @@ header {
     height: 25%;
   }
 
-  .timeline p {
-    font-size: 1.3rem;
-    line-height: 0.5cm;
+  /* Experience section rules */
+  .timeline ul {
+    padding: 2.5rem;
+    width: 80%;
+  }
+  .timeline .date {
+    margin: 0;
+    margin-bottom: 3rem;
   }
   .timeline .date::before {
-    font-size: 1.3rem;
-    left: -18rem;
+    left: -15rem;
     width: 5rem;
     min-width: 10rem;
     text-align: center;
   }
+  .timeline .date::after {
+    left: -3.5rem;
+  }
   .timeline h1 {
-    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 1rem;
     color: #ffffff;
+  }
+  .skill p,
+  .timeline p {
+    line-height: 0.6cm;
   }
 
   .up {
@@ -1164,7 +1191,8 @@ header {
   }
 
   section.achievements,
-  section.portfolio {
+  section.portfolio,
+  section.experience {
     padding-top: 6rem;
   }
   .skills {
@@ -1235,6 +1263,14 @@ header {
   .skills a:hover {
     color: #c26700;
   }
+
+  .timeline ul {
+    width: 95%;
+  }
+  .timeline .date::before {
+    left: -11rem;
+    transform: rotate(-90deg);
+  }
 }
 
 /* Normal phone view rules */
@@ -1246,6 +1282,9 @@ header {
   .skills {
     margin-left: 12rem;
     margin-right: 0;
+  }
+  .timeline .date::before {
+    left: -10.5rem;
   }
 }
 
@@ -1317,6 +1356,14 @@ header {
   .portfolio__item__description h6,
   .portfolio__item__description .cta {
     font-size: 1.4rem;
+  }
+
+  .timeline ul {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  .timeline .date::after {
+    left: -2.5rem;
   }
 }
 
